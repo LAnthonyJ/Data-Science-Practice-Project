@@ -82,11 +82,14 @@ class TestDataset(Dataset):
 # ── Model ───────────────────────────────────────────────────────
 class MeteoriteClassifier(nn.Module):
     """DINOv3-L + Texture hybrid classifier with MLP head."""
-    def __init__(self, dino_dim=1024, tex_dim=21, dino_name="vit_large_patch16_dinov3.lvd1689m"):
+    def __init__(self, dino_dim=1024, tex_dim=21, dino_name="vit_large_patch16_dinov3.lvd1689m",
+                 dino_weights=None):
         super().__init__()
-        self.backbone = timm.create_model(
-            dino_name, pretrained=True, num_classes=0, img_size=512,
-        )
+        kwargs = dict(pretrained=True, num_classes=0, img_size=512)
+        # Use local weights if provided (required for offline environments)
+        if dino_weights and os.path.exists(dino_weights):
+            kwargs["pretrained_cfg_overlay"] = {"file": dino_weights}
+        self.backbone = timm.create_model(dino_name, **kwargs)
         for p in self.backbone.parameters():
             p.requires_grad = False
         self.backbone.eval()
@@ -140,6 +143,8 @@ def main():
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--top_k", type=int, default=86,
                         help="Number of top predictions as positive class")
+    parser.add_argument("--dino_weights", type=str, default=None,
+                        help="Path to local DINOv3 weights (model.safetensors)")
     args = parser.parse_args()
 
     device = args.device if torch.cuda.is_available() else "cpu"
@@ -173,7 +178,7 @@ def main():
 
     # ── Load model ──
     print("Loading DINOv3+Tex classifier...")
-    model = MeteoriteClassifier().to(device)
+    model = MeteoriteClassifier(dino_weights=args.dino_weights).to(device)
 
     head_path = f"{args.checkpoint_dir}/dinov3_tex_mlp_head.pth"
     if os.path.exists(head_path):
