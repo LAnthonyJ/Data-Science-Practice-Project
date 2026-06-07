@@ -5,7 +5,7 @@
 **Best Result: F1 = 0.86046** (Stage 2 Private Test Set)
 
 > GitHub: https://github.com/LAnthonyJ/Data-Science-Practice-Project
-> 模型与数据: [待上传百度网盘链接]
+> 模型与数据: https://pan.baidu.com/s/11ZQfDjY0uJAMb_7RTkR_kQ?pwd=dn2w (提取码: dn2w)
 
 ## Overview
 
@@ -134,7 +134,7 @@ The training script will:
 | `checkpoints/texture_cache.npz` | Pre-computed texture features (RobustScaler fitted) | 605 KB |
 
 **Cloud download (完整离线包，含训练好的模型头 + 纹理缓存 + 补充数据集)：**
-- [百度网盘 — 待上传] (提取码: 待定)
+- [百度网盘](https://pan.baidu.com/s/11ZQfDjY0uJAMb_7RTkR_kQ?pwd=dn2w) (提取码: dn2w)
 
 压缩包 `project_models_and_data.zip` (240 MB) 包含：
 - `checkpoints/` — 训练好的 DINOv3+Tex MLP 头、ConvNeXtV2 头、纹理缓存
