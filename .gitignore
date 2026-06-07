@@ -1,0 +1,25 @@
+
+# Data
+data/
+Dataset/
+*.csv
+!sample_submission.csv
+
+# Pretrained backbones (large files)
+pretrained/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Outputs
+runs/
+output/
+*.pth
+!checkpoints/*.pth
+
+# OS
+.DS_Store
+Thumbs.db
