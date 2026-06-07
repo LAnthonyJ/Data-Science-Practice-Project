@@ -131,7 +131,7 @@ The training script will:
 | `checkpoints/texture_cache.npz` | Pre-computed texture features (RobustScaler fitted) | 605 KB |
 
 **Cloud download (full package including backbone weights):**
-- [Baidu Netdisk / Google Drive link — to be added]
+- [Baidu Netdisk](https://pan.baidu.com/s/1BLB2HklWfRRwwKKNV-nHQQ?pwd=ae6z) (提取码: ae6z)
 
 ## Training Configuration
 

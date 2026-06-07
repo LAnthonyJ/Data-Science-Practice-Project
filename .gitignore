@@ -4,6 +4,12 @@ data/
 Dataset/
 *.csv
 !sample_submission.csv
+!checkpoints/*.csv
+
+# Checkpoints (trained heads)
+*.pth
+!checkpoints/*.pth
+!checkpoints/*.npz
 
 # Pretrained backbones (large files)
 pretrained/
@@ -17,8 +23,9 @@ venv/
 # Outputs
 runs/
 output/
-*.pth
-!checkpoints/*.pth
+
+# Archives
+*.zip
 
 # OS
 .DS_Store
