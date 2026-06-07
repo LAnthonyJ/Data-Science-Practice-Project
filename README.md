@@ -1,8 +1,11 @@
-# Meteorite Image Classification
+# 陨石图像识别 — 数据科学实践期末项目
 
-**[STA326 Final Project]** — Deep learning based binary classification of meteorite vs. non-meteorite rock images.
+**第11组：张航源 | 陈杭楠 | 程卓 | 林敬知 | 潘昊阳**
 
-**Best Result: F1 = 0.85** (Private Leaderboard)
+**Best Result: F1 = 0.86046** (Stage 2 Private Test Set)
+
+> GitHub: https://github.com/LAnthonyJ/Data-Science-Practice-Project
+> 模型权重: https://pan.baidu.com/s/1BLB2HklWfRRwwKKNV-nHQQ?pwd=ae6z (提取码: ae6z)
 
 ## Overview
 
