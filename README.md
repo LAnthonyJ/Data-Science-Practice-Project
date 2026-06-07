@@ -5,8 +5,7 @@
 **Best Result: F1 = 0.86046** (Stage 2 Private Test Set)
 
 > GitHub: https://github.com/LAnthonyJ/Data-Science-Practice-Project
-> 模型权重: https://pan.baidu.com/s/1BLB2HklWfRRwwKKNV-nHQQ?pwd=ae6z (提取码: ae6z)
-> 补充数据集: [待上传]
+> 模型与数据: [待上传百度网盘链接]
 
 ## Overview
 
@@ -134,8 +133,12 @@ The training script will:
 | `checkpoints/convnextv2_base_test_prob.csv` | Pre-computed ConvNeXtV2 test probabilities | 12 KB |
 | `checkpoints/texture_cache.npz` | Pre-computed texture features (RobustScaler fitted) | 605 KB |
 
-**Cloud download (full package including backbone weights):**
-- [Baidu Netdisk](https://pan.baidu.com/s/1BLB2HklWfRRwwKKNV-nHQQ?pwd=ae6z) (提取码: ae6z)
+**Cloud download (完整离线包，含训练好的模型头 + 纹理缓存 + 补充数据集)：**
+- [百度网盘 — 待上传] (提取码: 待定)
+
+压缩包 `project_models_and_data.zip` (240 MB) 包含：
+- `checkpoints/` — 训练好的 DINOv3+Tex MLP 头、ConvNeXtV2 头、纹理缓存
+- `Dataset_supplement.tar.gz` — 2639 张岩石补充图片
 
 ## Training Configuration
 
