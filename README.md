@@ -6,6 +6,7 @@
 
 > GitHub: https://github.com/LAnthonyJ/Data-Science-Practice-Project
 > 模型权重: https://pan.baidu.com/s/1BLB2HklWfRRwwKKNV-nHQQ?pwd=ae6z (提取码: ae6z)
+> 补充数据集: [待上传]
 
 ## Overview
 
